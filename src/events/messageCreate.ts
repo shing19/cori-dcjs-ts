@@ -25,7 +25,7 @@ export default new Event("messageCreate", async (message) => {
             const discordUrl = repliedMessage.url;
             materialHandler.addMaterial(author, adder, guildName, channelName, title, date, keywords, material, discordUrl).then(async () =>{
                 stateMessge.edit(`✅ 素材碎片添加成功! 见: https://ddaocommunity.notion.site/b07350607bc446dbb39153db32fde357`)
-                await message.reply(`【新增卡片】\n作者：${author}\n上传者：${adder}\n服务器：${guildName}\n频道：${channelName}\n题目：${title}\n时间：${date}\n标签：${keywords}\n内容：${material}\n链接：${discordUrl}`);
+                // await message.reply(`【新增卡片】\n作者：${author}\n上传者：${adder}\n服务器：${guildName}\n频道：${channelName}\n题目：${title}\n时间：${date}\n标签：${keywords}\n内容：${material}\n链接：${discordUrl}`);
                 console.log(`【新增卡片】\n作者：${author}\n上传者：${adder}\n服务器：${guildName}\n频道：${channelName}\n题目：${title}\n时间：${date}\n标签：${keywords}\n内容：${material}\n链接：${discordUrl}`);
             }).catch(async () =>{
                 stateMessge.edit(':negative_squared_cross_mark: 添加失败, 请联络 BOT 管理员协助处理')
