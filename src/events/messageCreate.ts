@@ -7,7 +7,7 @@ export default new Event("messageCreate", async (message) => {
     if (message.mentions.users.first() && message.reference) {
         // console.log('成功捕捉到回复并且@人的信息')
         const repliedMessage = await message.fetchReference();
-        if (message.author != repliedMessage.author && !repliedMessage.author.bot && !message.author.bot) {
+        if (message.author != repliedMessage.author && !repliedMessage.author.bot && !message.author.bot && message.mentions.users.first().id == process.env.clientId) {
             repliedMessage.reply(`嗨，${message.author}觉得这段话太棒了，想请你投喂给我。`)
         }
         if (message.mentions.users.first().id == process.env.clientId && !repliedMessage.author.bot) {
