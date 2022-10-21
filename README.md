@@ -24,3 +24,6 @@ sudo docker image build -t 'cori' .
 sudo docker tag cori <your name>/cori
 sudo docker push <your name>/cori
 ```
+
+## Contributor community
+https://discord.com/channels/995771542631890944/1019574929571721266
