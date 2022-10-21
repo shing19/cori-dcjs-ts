@@ -13,6 +13,7 @@ cp .env.example .env
 # notionKey: notion api key
 # materialTable: card database
 # relationTable: author database
+# environment: dev | prod | debug
 #
 npm start
 ```
